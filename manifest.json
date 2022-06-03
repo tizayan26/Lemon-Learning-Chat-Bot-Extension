@@ -1,16 +1,13 @@
 {
     "name": "Lemon Learning Chatbot Demo",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Lemon Learning Chatbot Demo",
     "author": "Nasirul Akbar Khan",
    
-    "background": {
-      "service_worker": "assets/js/background.js"
-    },
     
     "content_scripts": [ {
       "all_frames": true,
-      "js": [ "assets/js/libs/jquery.js","assets/js/common.js", "assets/js/popup.js", "assets/js/content.js"],
+      "js": [ "assets/js/common.js", "assets/js/popup.js", "assets/js/content.js"],
       "matches": ["<all_urls>"],
       "run_at": "document_end"
     }],
@@ -43,7 +40,38 @@
         "resources": ["assets/imgs/logo.png"],
         "matches": ["<all_urls>"],
         "use_dynamic_url": true
+      },
+      {
+        "resources": ["assets/fonts/Helvetica36ThinItalic_22436.woff"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
+      },
+      {
+        "resources": ["assets/fonts/Helvetica46LightItalic_22438.woff"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
+      },
+      {
+        "resources": ["assets/fonts/Helvetica56Italic_22440.woff"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
+      },
+      {
+        "resources": ["assets/fonts/Helvetica65Medium_22443.woff"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
+      },
+      {
+        "resources": ["assets/fonts/Helvetica85Heavy_22449.woff"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
+      },
+      {
+        "resources": ["assets/fonts/Helvetica86HeavyItalic_22450.woff"],
+        "matches": ["<all_urls>"],
+        "use_dynamic_url": true
       }
+      
     ],
     "permissions": ["tabs"],
    

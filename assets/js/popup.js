@@ -10,8 +10,103 @@ function loadPopup() {
 
     var style = document.createElement('style');
     style.innerHTML = `
-        @import url('http://fonts.cdnfonts.com/css/helvetica-neue-9?styles=49034,49031,49033,49035,49032,49036,49038,49040,49042,49044,49037,49039,49041,49043,49045,49046');
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+    @font-face {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueBold.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica Neue';
+        font-style: italic;
+        font-weight: 700;
+        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/Helvetica 76 Bold Italic.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica Neue';
+        font-style: italic;
+        font-weight: 900;
+        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueBlackItalic 1.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica Neue';
+        font-style: italic;
+        font-weight: 500;
+        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueMediumItalic.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 900;
+        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/Helvetica95Black.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 25 UltraLight';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Helvetica 25 UltraLight'), url('chrome.runtime.getURL("assets/fonts/Helvetica25UltraLight_22433.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 35 Thin';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Helvetica 35 Thin'), url('chrome.runtime.getURL("assets/fonts/Helvetica35Thin_22435.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 45 Light';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Helvetica 45 Light'), url('chrome.runtime.getURL("assets/fonts/Helvetica45Light_22437.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 55 Roman';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Helvetica 55 Roman'), url('chrome.runtime.getURL("assets/fonts/Helvetica55Roman_22439.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 65 Medium';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica65Medium_22443.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 25 UltraLight';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Helvetica 25 UltraLight'), url('chrome.runtime.getURL("assets/fonts/Helvetica26UltraLightItalic_22434.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 35 Thin';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Helvetica 35 Thin'), url('chrome.runtime.getURL("assets/fonts/Helvetica36ThinItalic_22436.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 45 Light';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Helvetica 45 Light'), url('chrome.runtime.getURL("assets/fonts/Helvetica46LightItalic_22438.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 55 Roman';
+        font-style: italic;
+        font-weight: 400;
+        src: local('Helvetica 55 Roman'), url('chrome.runtime.getURL("assets/fonts/Helvetica56Italic_22440.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 65 Medium';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica85Heavy_22449.woff")}') format('woff")}');
+    }
+    @font-face {
+        font-family: 'Helvetica 65 Medium';
+        font-style: italic;
+        font-weight: 700;
+        src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica86HeavyItalic_22450.woff")}') format('woff")}');
+    }
+    
         /* Color Scheme*/
         :root {
             --marque: #fdbe00;
