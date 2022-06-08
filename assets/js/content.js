@@ -38,7 +38,6 @@ chrome.storage.local.get(['pos'], function(result) {
         btn.style.top = obj.top;
         btn.style.left = obj.left;
     }
-
 });
 
 dragElement(btn);

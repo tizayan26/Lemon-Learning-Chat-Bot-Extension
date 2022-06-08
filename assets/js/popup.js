@@ -1,13 +1,6 @@
 function loadPopup() {
     const html = document.createElement('html');
     var head = document.createElement('head');
-
-    // var link = document.createElement('link');
-    // link.rel = "stylesheet";
-    // link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
-    // head.appendChild(link);
-
-
     var style = document.createElement('style');
     style.innerHTML = `
         @font-face {
