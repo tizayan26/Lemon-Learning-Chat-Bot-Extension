@@ -2,120 +2,109 @@ function loadPopup() {
     const html = document.createElement('html');
     var head = document.createElement('head');
 
-    var link = document.createElement('link');
-    link.rel = "stylesheet";
-    link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
-    head.appendChild(link);
+    // var link = document.createElement('link');
+    // link.rel = "stylesheet";
+    // link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
+    // head.appendChild(link);
 
 
     var style = document.createElement('style');
     style.innerHTML = `
-    @font-face {
-        font-family: 'Helvetica Neue';
-        font-style: normal;
-        font-weight: 700;
-        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueBold.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica Neue';
-        font-style: italic;
-        font-weight: 700;
-        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/Helvetica 76 Bold Italic.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica Neue';
-        font-style: italic;
-        font-weight: 900;
-        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueBlackItalic 1.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica Neue';
-        font-style: italic;
-        font-weight: 500;
-        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueMediumItalic.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica Neue';
-        font-style: normal;
-        font-weight: 900;
-        src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/Helvetica95Black.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 25 UltraLight';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Helvetica 25 UltraLight'), url('chrome.runtime.getURL("assets/fonts/Helvetica25UltraLight_22433.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 35 Thin';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Helvetica 35 Thin'), url('chrome.runtime.getURL("assets/fonts/Helvetica35Thin_22435.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 45 Light';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Helvetica 45 Light'), url('chrome.runtime.getURL("assets/fonts/Helvetica45Light_22437.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 55 Roman';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Helvetica 55 Roman'), url('chrome.runtime.getURL("assets/fonts/Helvetica55Roman_22439.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 65 Medium';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica65Medium_22443.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 25 UltraLight';
-        font-style: italic;
-        font-weight: 400;
-        src: local('Helvetica 25 UltraLight'), url('chrome.runtime.getURL("assets/fonts/Helvetica26UltraLightItalic_22434.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 35 Thin';
-        font-style: italic;
-        font-weight: 400;
-        src: local('Helvetica 35 Thin'), url('chrome.runtime.getURL("assets/fonts/Helvetica36ThinItalic_22436.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 45 Light';
-        font-style: italic;
-        font-weight: 400;
-        src: local('Helvetica 45 Light'), url('chrome.runtime.getURL("assets/fonts/Helvetica46LightItalic_22438.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 55 Roman';
-        font-style: italic;
-        font-weight: 400;
-        src: local('Helvetica 55 Roman'), url('chrome.runtime.getURL("assets/fonts/Helvetica56Italic_22440.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 65 Medium';
-        font-style: normal;
-        font-weight: 700;
-        src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica85Heavy_22449.woff")}') format('woff")}');
-    }
-    @font-face {
-        font-family: 'Helvetica 65 Medium';
-        font-style: italic;
-        font-weight: 700;
-        src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica86HeavyItalic_22450.woff")}') format('woff")}');
-    }
-    
-        /* Color Scheme*/
-        :root {
-            --marque: #fdbe00;
-            --marque-hover: #ffce39;
-            --marque-active: #eea800;
-
-            --primary: #157ad8;
-            --primary-hover: #118cff;
-            --primary-active: #1361aa;
+        @font-face {
+            font-family: 'Helvetica Neue';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueBold.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica Neue';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/Helvetica 76 Bold Italic.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica Neue';
+            font-style: italic;
+            font-weight: 900;
+            src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueBlackItalic 1.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica Neue';
+            font-style: italic;
+            font-weight: 500;
+            src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/HelveticaNeueMediumItalic.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica Neue';
+            font-style: normal;
+            font-weight: 900;
+            src: local('Helvetica Neue'), url('${chrome.runtime.getURL("assets/fonts/Helvetica95Black.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 25 UltraLight';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Helvetica 25 UltraLight'), url('chrome.runtime.getURL("assets/fonts/Helvetica25UltraLight_22433.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 35 Thin';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Helvetica 35 Thin'), url('chrome.runtime.getURL("assets/fonts/Helvetica35Thin_22435.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 45 Light';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Helvetica 45 Light'), url('chrome.runtime.getURL("assets/fonts/Helvetica45Light_22437.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 55 Roman';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Helvetica 55 Roman'), url('chrome.runtime.getURL("assets/fonts/Helvetica55Roman_22439.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 65 Medium';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica65Medium_22443.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 25 UltraLight';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Helvetica 25 UltraLight'), url('chrome.runtime.getURL("assets/fonts/Helvetica26UltraLightItalic_22434.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 35 Thin';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Helvetica 35 Thin'), url('chrome.runtime.getURL("assets/fonts/Helvetica36ThinItalic_22436.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 45 Light';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Helvetica 45 Light'), url('chrome.runtime.getURL("assets/fonts/Helvetica46LightItalic_22438.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 55 Roman';
+            font-style: italic;
+            font-weight: 400;
+            src: local('Helvetica 55 Roman'), url('chrome.runtime.getURL("assets/fonts/Helvetica56Italic_22440.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 65 Medium';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica85Heavy_22449.woff")}') format('woff")}');
+        }
+        @font-face {
+            font-family: 'Helvetica 65 Medium';
+            font-style: italic;
+            font-weight: 700;
+            src: local('Helvetica 65 Medium'), url('chrome.runtime.getURL("assets/fonts/Helvetica86HeavyItalic_22450.woff")}') format('woff")}');
         }
 
         *{
@@ -133,8 +122,10 @@ function loadPopup() {
         .btn-help{
             position:fixed;
             z-index: 9999999;
-            top: 80vh;
-            left: 80vw;
+            /*top: 80vh;
+            left: 80vw;*/
+            right:10px;
+            bottom: 10px;
             font-size:12px;
             font-weight:600;
             height: 30px;
@@ -150,12 +141,15 @@ function loadPopup() {
             display:none;
             box-shadow: 0px 2px 6px 2px #afadad;
             z-index:99999;
-            height:500px;
+            height:508px;
             width:300px;
             background-color: #fff;
             border-radius:4px;
-            left: 50vw;
-            top: 4vh;
+            /*left: 50vw;
+            top: 4vh;*/
+            bottom: 52px;
+            right: 65px;
+            overflow: hidden;
         }
         .header{
             background-color: #fdbe00;
@@ -170,10 +164,10 @@ function loadPopup() {
             text-align: center;
         }
         .logo{
-            width:40%;
+            width: 100px;
         }
         .content{
-            height:345px;
+            height:335px;
             overflow:auto;
             padding: 10px;
         }
@@ -211,7 +205,7 @@ function loadPopup() {
             // border: 1px solid rgb(0,0,0,0.1);
             background-color: #f4f4f4;
             border-radius:15px;
-            width:100%;
+            width: 94%;
             padding: 5px 10px;
         }
         .chat-input>input[type=text]{
@@ -225,6 +219,8 @@ function loadPopup() {
             background-color: transparent;
         }
         .btn-send{
+            position: relative;
+            top: 6px;
             height: 20px;
             cursor: pointer;
         }
@@ -260,7 +256,7 @@ function loadPopup() {
             clear:both;
         }
         .option-heads{
-            margin: 10px 0;
+            margin: 4px 0;
             font-size:12px;
             background-color: #fdbe00;
             color: #fff;

@@ -38,7 +38,7 @@ btn.addEventListener('click', function() {
     modal.style.display = 'block';
     modal.style.left = (parseInt(btn.style.left) - 250) + 'px';
     modal.style.top = (parseInt(btn.style.top) - 520) + 'px';
-    btn.style.background = 'transparent';
+    btn.style.backgroundColor = '#fff';
     btn.style.border = '2px solid #fdbe00';
 })
 close.addEventListener('click', function() {
@@ -106,6 +106,7 @@ send.addEventListener('click', function() {
                         option_head.style.left = '45%';
                         option_head.innerText = 'GO';
                         content.appendChild(option_head);
+                        shadowRootPopup.getElementById('chat_input').disabled = true;
                     }
                     content.appendChild(option_head);
                     var option_head = document.createElement('div');
@@ -121,13 +122,13 @@ send.addEventListener('click', function() {
                         content.appendChild(human_head);
                         var bot_head = document.createElement('div');
                         bot_head.className = 'robot-heads'
-                        bot_head.innerText = 'Ok! I will need a few informations first :';
+                        bot_head.innerHTML = 'Ok! I will need a few informations first :<br>What is the name of the opportunity?';
                         content.appendChild(bot_head);
-                        var bot_head = document.createElement('div');
-                        bot_head.className = 'robot-heads'
-                        bot_head.style.marginTop = '10px';
-                        bot_head.innerText = 'What is the name of the opportunity?';
-                        content.appendChild(bot_head);
+                        // var bot_head = document.createElement('div');
+                        // bot_head.className = 'robot-heads'
+                        // bot_head.style.marginTop = '10px';
+                        // bot_head.innerText = 'What is the name of the opportunity?';
+                        // content.appendChild(bot_head);
                         account_name = 1;
                     }
                     content.appendChild(option_head);
@@ -179,6 +180,7 @@ send.addEventListener('click', function() {
                     option_head.style.left = '45%';
                     option_head.innerText = 'GO';
                     content.appendChild(option_head);
+                    shadowRootPopup.getElementById('chat_input').disabled = true;
                 }
                 content.appendChild(option_head);
                 var option_head = document.createElement('div');
@@ -201,6 +203,7 @@ send.addEventListener('click', function() {
                 option_head.style.left = '45%';
                 option_head.innerText = 'GO';
                 content.appendChild(option_head);
+                shadowRootPopup.getElementById('chat_input').disabled = true;
             }
             if (account_name == 1 && close_date == 0) {
                 var bot_head = document.createElement('div');
@@ -307,6 +310,7 @@ send.addEventListener('click', function() {
                     option_head.style.left = '45%';
                     option_head.innerText = 'GO';
                     content.appendChild(option_head);
+                    shadowRootPopup.getElementById('chat_input').disabled = true;
                 }
             }
         }

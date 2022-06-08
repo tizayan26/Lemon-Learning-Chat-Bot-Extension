@@ -6,7 +6,7 @@
    
     
     "content_scripts": [ {
-      "all_frames": true,
+      "all_frames": false,
       "js": [ "assets/js/common.js", "assets/js/popup.js", "assets/js/content.js"],
       "matches": ["<all_urls>"],
       "run_at": "document_end"
