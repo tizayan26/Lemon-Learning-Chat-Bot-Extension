@@ -32,6 +32,13 @@ function dragElement(elmnt) {
         pos4 = e.clientY;
         elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+        var obj = {
+            top: elmnt.style.top,
+            left: elmnt.style.left
+        }
+        chrome.storage.local.set({pos: JSON.stringify(obj)}, function() {
+            console.log('Value is set to ' + JSON.stringify(obj));
+        });
     }
 
     function closeDragElement() {

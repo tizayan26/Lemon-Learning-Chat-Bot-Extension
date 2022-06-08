@@ -32,6 +32,15 @@ input.addEventListener("keypress", function(event) {
     }
 });
 
+chrome.storage.local.get(['pos'], function(result) {
+    if(result!=undefined){
+        var obj = JSON.parse(result.pos);
+        btn.style.top = obj.top;
+        btn.style.left = obj.left;
+    }
+
+});
+
 dragElement(btn);
 btn.addEventListener('click', function() {
 
