@@ -134,7 +134,7 @@ function loadPopup() {
             display:none;
             box-shadow: 0px 2px 6px 2px #afadad;
             z-index:99999;
-            height:508px;
+            height:510px;
             width:300px;
             background-color: #fff;
             border-radius:4px;
@@ -160,7 +160,7 @@ function loadPopup() {
             width: 100px;
         }
         .content{
-            height:335px;
+            height:330px;
             overflow:auto;
             padding: 10px;
         }

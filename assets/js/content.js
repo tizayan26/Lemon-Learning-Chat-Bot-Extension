@@ -101,13 +101,13 @@ send.addEventListener('click', function() {
                         content.appendChild(human_head);
                         var bot_head = document.createElement('div');
                         bot_head.className = 'robot-heads'
-                        bot_head.innerText = 'Great! Click on the "GO" button whenever you are ready and a step-by-step guide will show up.';
+                        bot_head.innerHTML = 'Great! Click on the "GO" button whenever you are ready and a step-by-step guide will show up.<br>Thank you for using LemonBot.';
                         content.appendChild(bot_head);
-                        var bot_head = document.createElement('div');
+                        /*var bot_head = document.createElement('div');
                         bot_head.className = 'robot-heads'
                         bot_head.style.marginTop = '10px';
                         bot_head.innerText = 'Thank you for using LemonBot.';
-                        content.appendChild(bot_head);
+                        content.appendChild(bot_head);*/
                         var option_head = document.createElement('div');
                         option_head.className = 'option-heads';
                         option_head.style.position = 'relative';
@@ -175,13 +175,13 @@ send.addEventListener('click', function() {
                     })
                     var bot_head = document.createElement('div');
                     bot_head.className = 'robot-heads'
-                    bot_head.innerText = 'Great! Click on the "GO" button whenever you are ready and a step-by-step guide will show up.';
+                    bot_head.innerHTML = 'Great! Click on the "GO" button whenever you are ready and a step-by-step guide will show up.<br>Thank you for using LemonBot.';
                     content.appendChild(bot_head);
-                    var bot_head = document.createElement('div');
+                    /*var bot_head = document.createElement('div');
                     bot_head.className = 'robot-heads'
                     bot_head.style.marginTop = '10px';
                     bot_head.innerText = 'Thank you for using LemonBot.';
-                    content.appendChild(bot_head);
+                    content.appendChild(bot_head);*/
                     var option_head = document.createElement('div');
                     option_head.className = 'option-heads';
                     option_head.style.position = 'relative';
@@ -198,13 +198,13 @@ send.addEventListener('click', function() {
             }
 
             if (input_val.toLowerCase() == 'show me how to do it') {
-                bot_head.innerText = 'Great! Click on the "GO" button whenever you are ready and a step-by-step guide will show up.';
+                bot_head.innerHTML = 'Great! Click on the "GO" button whenever you are ready and a step-by-step guide will show up.<br>Thank you for using LemonBot.';
                 content.appendChild(bot_head);
-                var bot_head = document.createElement('div');
+                /*var bot_head = document.createElement('div');
                 bot_head.className = 'robot-heads'
                 bot_head.style.marginTop = '10px';
                 bot_head.innerText = 'Thank you for using LemonBot.';
-                content.appendChild(bot_head);
+                content.appendChild(bot_head);*/
                 var option_head = document.createElement('div');
                 option_head.className = 'option-heads';
                 option_head.style.position = 'relative';
@@ -309,6 +309,7 @@ send.addEventListener('click', function() {
 
                     var bot_head = document.createElement('div');
                     bot_head.className = 'robot-heads'
+                    bot_head.style.marginTop = '10px';
                     bot_head.innerText = 'Click on the GO button to be redirected to the corresponsing page. Please review the informations on the form and click on "Save" to create the opportunity.';
                     content.appendChild(bot_head);
 
